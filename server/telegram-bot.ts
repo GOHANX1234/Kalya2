@@ -19,7 +19,7 @@ cloudinary.config({
 });
 
 // Admin chat IDs - only these users can upload videos
-const ADMIN_CHAT_IDS = [7479124922, 11111111];
+const ADMIN_CHAT_IDS = [7479124922, 1721139930];
 
 // Helper function to check if user is admin
 function isAdmin(chatId: number): boolean {
@@ -262,7 +262,7 @@ Your video will be uploaded and you'll receive a shareable link!`;
       sessions.delete(chatId);
 
       // Generate video link
-      const productionUrl = process.env.PRODUCTION_URL || 'https://kalyaplayer.onrender.com';
+      const productionUrl = process.env.PRODUCTION_URL || 'https://kalyaplayer-82rp.onrender.com';
       const devUrl = process.env.REPLIT_DEV_DOMAIN ? `https://${process.env.REPLIT_DEV_DOMAIN}` : 'http://localhost:5000';
       const baseUrl = process.env.NODE_ENV === 'production' ? productionUrl : devUrl;
       const videoLink = `${baseUrl}/videos/${savedVideo.id}`;
