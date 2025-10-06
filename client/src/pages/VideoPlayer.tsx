@@ -115,7 +115,7 @@ export default function VideoPlayer() {
               <div className="bg-muted/50 rounded-lg p-4 font-mono text-xs overflow-x-auto border border-border">
                 <code className="text-foreground">
                   {`<iframe 
-  src="https://kalyaplayer.onrender.com/videos/${video.id}" 
+  src="https://kalyaplayer-82rp.onrender.com/videos/${video.id}" 
   width="560" 
   height="315" 
   frameborder="0" 
@@ -131,7 +131,7 @@ export default function VideoPlayer() {
                 size="sm"
                 className="absolute top-2 right-2"
                 onClick={() => {
-                  const embedCode = `<iframe src="https://kalyaplayer.onrender.com/videos/${video.id}" width="560" height="315" frameborder="0" allowfullscreen loading="lazy" allow="autoplay; fullscreen" title="${video.title}"></iframe>`;
+                  const embedCode = `<iframe src="https://kalyaplayer-82rp.onrender.com/videos/${video.id}" width="560" height="315" frameborder="0" allowfullscreen loading="lazy" allow="autoplay; fullscreen" title="${video.title}"></iframe>`;
                   navigator.clipboard.writeText(embedCode);
                   setCopied(true);
                   toast({
